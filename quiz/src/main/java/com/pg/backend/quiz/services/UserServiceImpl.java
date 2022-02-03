@@ -18,18 +18,18 @@ public class UserServiceImpl implements UserService{
     private RoleRepo roleRepo;
 
     @Override
-    public UserModel createUser(UserModel userModel, Set<UserRole> userRoles) {
+    public UserModel createUser(UserModel userModel, Set<UserRole> userRoles) throws Exception {
         UserModel userByName = this.userRepo.findByUsername(userModel.getUsername());
         if(userByName !=null){
             System.out.println("User already present");
-            throw new RuntimeException("User already present");
+            throw new Exception("User already present");
         }
         else{
             for(UserRole ur : userRoles){
                 roleRepo.save(ur.getRole());
             }
-            userByName.getUserRoles().addAll(userRoles);
-            userByName=this.userRepo.save(userByName);
+            userModel.getUserRoles().addAll(userRoles);
+            userByName=this.userRepo.save(userModel);
         }
         return userByName;
     }

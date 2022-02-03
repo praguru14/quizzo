@@ -8,5 +8,5 @@ import java.util.Set;
 
 @Service
 public interface UserService {
-    public UserModel createUser(UserModel userModel, Set<UserRole> userRoles);
+    public UserModel createUser(UserModel userModel, Set<UserRole> userRoles) throws Exception;
 }
