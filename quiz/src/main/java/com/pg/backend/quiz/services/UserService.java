@@ -9,4 +9,7 @@ import java.util.Set;
 @Service
 public interface UserService {
     public UserModel createUser(UserModel userModel, Set<UserRole> userRoles) throws Exception;
+    public UserModel findByUsername(String username);
+    public void deleteById(Long id);
+
 }

@@ -25,25 +25,25 @@ public class QuizApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println("Starting code");
-		UserModel user = new UserModel();
-		user.setFirstName("Prafull");
-		user.setLastName("Gururani");
-		user.setEmail("praguru14@gmail.com");
-		user.setUsername("praguru14");
-		user.setPassword("root");
-		user.setProfile_url("default.png");
-
-		RoleModel role1 = new RoleModel();
-		role1.setId(1L);
-		role1.setRoleName("ADMIN");
-
-		Set<UserRole> userRoleSet = new HashSet<>();
-		UserRole userRole = new UserRole();
-		userRole.setRole(role1);
-		userRole.setUser(user);
-		userRoleSet.add(userRole);
-
-		UserModel userModel = userService.createUser(user,userRoleSet);
-		System.out.println(userModel.toString());
+//		UserModel user = new UserModel();
+//		user.setFirstName("Prafull");
+//		user.setLastName("Gururani");
+//		user.setEmail("praguru14@gmail.com");
+//		user.setUsername("praguru14");
+//		user.setPassword("root");
+//		user.setProfile_url("default.png");
+//
+//		RoleModel role1 = new RoleModel();
+//		role1.setId(1L);
+//		role1.setRoleName("ADMIN");
+//
+//		Set<UserRole> userRoleSet = new HashSet<>();
+//		UserRole userRole = new UserRole();
+//		userRole.setRole(role1);
+//		userRole.setUser(user);
+//		userRoleSet.add(userRole);
+//
+//		UserModel userModel = userService.createUser(user,userRoleSet);
+//		System.out.println(userModel.toString());
 	}
 }
