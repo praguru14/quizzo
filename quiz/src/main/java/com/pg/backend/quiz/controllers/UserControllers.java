@@ -12,17 +12,20 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/user")
+@CrossOrigin(origins = "*")
 public class UserControllers {
 
     @Autowired
     private UserService userService;
+
+    @GetMapping("/")
+    public String welcomeUser(){
+        return "We  lcome";
+    }
     @PostMapping("/")
     public UserModel createUser(@RequestBody UserModel user) throws Exception {
 
         Set<UserRole> userRoleSet = new HashSet<>();
-
-
-
         RoleModel role = new RoleModel();
         role.setId(45L);
         role.setRoleName("USER");
