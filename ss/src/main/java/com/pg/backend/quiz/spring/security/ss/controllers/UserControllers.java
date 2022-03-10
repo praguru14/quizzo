@@ -3,14 +3,12 @@ package com.pg.backend.quiz.spring.security.ss.controllers;
 import com.pg.backend.quiz.spring.security.ss.models.User;
 import com.pg.backend.quiz.spring.security.ss.services.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("/admin")
 public class UserControllers {
 
     @Autowired
