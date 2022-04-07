@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="quiz" />
-        <module name="ss" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +18,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="quiz" options="-parameters" />
+      <module name="ss" options="-parameters" />
     </option>
   </component>
 </project>
